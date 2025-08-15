@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+/* .inter-<uniquifier> {
+
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+*{
+    font-family: "Inter", sans-serif;
+}
 
 
 /*! common color section starts */
@@ -61,5 +75,10 @@
 
  .secondary_btn {
 
+ }
+
+ /* padding */
+ .common_padding{
+    @apply px-4 md:px-12 lg:px-16 xl:px-24
  }
 /*! common color section ends */
