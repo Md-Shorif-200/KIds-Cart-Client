@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+/*! common color section starts */
+
+/* bg color */
+
+ .primary_bg_color {
+  @apply bg-[#01A49E]
+}
+
+.secondary_bg_color {
+     @apply bg-[#F0E7D9]
+     
+    }
+    
+    .accent_bg_color {
+        
+        @apply bg-white
+ }
+
+ /* text color */
+
+ .primary_text_color  {
+        @apply text-[#01A49E]
+    }
+    
+    
+    .secondary_text_color  {
+      @apply text-[#000000]
+
+ }
+
+ .accent_text_color {
+    @apply text-[#333333]
+ }
+
+ /* paragrap color */
+  .primay_paragrap_text_color {
+    @apply text-[#666666]
+  }
+
+    .secondary_paragrap_text_color {
+    @apply text-[#CCCCCC]
+}
+
+  /* card  */
+    .bg_red{
+        @apply bg-[#EB4227]
+    }
+    .text_red {
+        @apply text-[#EB4227]
+
+    }
+
+ /* button */
+ .primary_btn{
+
+ }
+
+ .secondary_btn {
+
+ }
+/*! common color section ends */
