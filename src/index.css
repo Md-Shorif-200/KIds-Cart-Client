@@ -119,3 +119,38 @@
      @apply  grid-cols-4
   }
 }
+
+
+
+@media (min-width : 400px) and (max-width : 500px) {
+  .product_card{
+
+    @apply  text-center 
+  }
+
+  .recomended_section{
+    @apply px-12
+  }
+  }
+
+  @media (min-width : 501px) and (max-width : 639px) {
+
+    .product_cards{
+      @apply grid-cols-2
+    }
+
+
+  .product_card{
+
+    @apply  text-start 
+  }
+
+  
+
+  .recomended_section{
+    @apply px-4
+  }
+
+  }
+
+
