@@ -76,12 +76,12 @@
  }
 
  .secondary_btn {
-
+@apply btn bg-white text-base text-black rounded-[8px] px-[10px] py-[20px] capitalize
  }
 
  /* padding */
  .common_padding{
-    @apply px-4 md:px-12 lg:px-16 xl:px-24
+    @apply px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20
  }
 /*! common color section ends */
 
@@ -110,5 +110,12 @@
 @media (min-width : 450px)  {
   .mobail_layout {
      @apply  flex flex-row-reverse gap-x-2 justify-between  lg:hidden 
+  }
+}
+
+
+@media (min-width : 400px) and (max-width : 640px)  {
+  .catagory_tabs {
+     @apply  grid-cols-4
   }
 }

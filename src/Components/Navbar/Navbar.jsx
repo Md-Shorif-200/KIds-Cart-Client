@@ -75,7 +75,7 @@ const Navbar = () => {
             {/* item list */}
             <div className="items_list">
               <div 
-                className="w-[280px] h-[51px] bg-teal-700 rounded-tl-[10px] rounded-tr-[10px] flex justify-between items-center px-6 cursor-pointer"
+                className="w-[220px] xl:w-[280px] h-[51px] bg-teal-700 rounded-tl-[10px] rounded-tr-[10px] flex justify-between items-center px-6 cursor-pointer"
                 onClick={toggleDropdown}
               >
                 <div className="menu_icon text-[14px] font-normal text-white leading-[21px]">
@@ -92,7 +92,7 @@ const Navbar = () => {
               </div>
 
               {isOpen && (
-                <div className="select_list bg-white w-[280px] py-4 absolute top-40 shadow-sm z-10">
+                <div className="select_list bg-white w-[220px] xl:w-[280px] py-4 absolute top-40 shadow-sm z-10">
                   <h2 className="text-[14px] uppercase text_red leading-[21px] px-6">
                     sale 40% off
                   </h2>
@@ -120,11 +120,12 @@ const Navbar = () => {
             {/* search */}
             <div className="search_field flex my-[15px]">
               <div className="relative">
-                <input type="search" className="bg-white w-[230px] text-[16px] primay_paragrap_text_color capitalize px-5 py-3 border-none outline-none  rounded-tl-full rounded-bl-full " placeholder="search anything"></input>
-                <FaSearch className="text-[16px] text-black absolute top-1/2 right-4 transform -translate-y-1/2"></FaSearch>
+                <input type="search" className="bg-white w-[180px] xl:w-[230px] text-[12px] xl:text-[16px] primay_paragrap_text_color capitalize px-5 py-3 border-none outline-none  rounded-tl-full rounded-bl-full " placeholder="search anything"></input>
+                <FaSearch className="text-[12px] xl:text-[16px] text-black absolute top-1/2 right-4 transform -translate-y-1/2"></FaSearch>
               </div>
-              <div className="button  bg-white px-5 py-3 text-[14px] capitalize text-black flex gap-x-4 font-semibold justify-between items-center rounded-tr-full rounded-br-full border-l border-gray-200 ">
-                All Categories <IoIosArrowDown></IoIosArrowDown>
+                    {/* search category button */}
+              <div className="button  bg-white px-5 py-3 text-[11px] xl:text-[14px] capitalize text-black flex gap-x-4 font-semibold justify-between items-center rounded-tr-full rounded-br-full border-l border-gray-200 ">
+                <span className="hidden xl:block">All</span> Categories <IoIosArrowDown></IoIosArrowDown>
               </div>
             </div>
 
@@ -140,11 +141,11 @@ const Navbar = () => {
           <div className="user_action_&_contact mt-3 ">
             <div className="user_action  flex gap-x-[33px]">
               <div className="flex gap-x-[13px]">
-                <div className="circel bg-white w-10 h-10 rounded-full "></div>
+                <div className="circel bg-white w-10 h-10 rounded-full hidden xl:block "></div>
                 <div className="circel bg-white w-10 h-10 rounded-full flex justify-center items-center text-[14px] text-black  ">
                   <FiHeart></FiHeart> 
                 </div>
-                <div className="circel bg-white w-10 h-10 rounded-full "></div>
+                <div className="circel bg-white w-10 h-10 rounded-full hidden xl:block "></div>
                 {/* user auth */}
                 <div className="user_auth ">
                   <p className="text-[16px] uppercase text-white font-light">welcome</p>
@@ -164,15 +165,15 @@ const Navbar = () => {
             </div>
             
             {/* contact */}
-            <div className="contact flex gap-x-[50px] mt-4">
-              <div className="hotline border border-white rounded-full pl-10 pr-6 py-3 text-[16px] capitalize font-light text-white ">
+            <div className="contact flex justify-between mt-4">
+              <div className="hotline border border-white rounded-full pl-4 xl:pl-10 pr-2 xl:pr-6 py-3  text-[12px] xl:text-[16px] capitalize font-light text-white ">
                 hotline 24/7 <span className="font-bold"> (025) 3886 25 16 </span>
               </div>
               <div className="flex items-center gap-x-2">
-                <p className="flex items-center gap-x-1 text-[18px] uppercase text-white font-light ">usd <IoIosArrowDown></IoIosArrowDown> </p>
-                <p  className="flex items-center gap-x-2 text-[18px] uppercase text-white font-light ">
+                <p className="flex items-center gap-x-1 text-[16px] xl:text-[18px] uppercase text-white font-light ">usd <IoIosArrowDown></IoIosArrowDown> </p>
+                <p  className="flex items-center gap-x-2 text-[16px] xl:text-[18px] uppercase text-white font-light ">
                   <img src={flugImg} className="w-[15px] h-[15px] " alt="" />
-                  usd 
+                  Eng 
                   <IoIosArrowDown></IoIosArrowDown>
                 </p>
               </div>
@@ -205,7 +206,7 @@ const Navbar = () => {
                 </div>
 
                 {isOpen && (
-                  <div className="select_list bg-white w-[200px] py-3 absolute top-20 left-20 shadow-lg z-20 rounded-lg">
+                  <div className="select_list bg-white w-[200px] py-3 absolute top-[70px] right-3 shadow-lg z-20 rounded-lg">
                     <h2 className="text-[12px] uppercase text_red px-4 mb-2">
                       sale 40% off
                     </h2>
