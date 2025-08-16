@@ -13,6 +13,8 @@
 
 *{
     font-family: "Inter", sans-serif;
+    /* outline: 1px solid red; */
+
 }
 
 
@@ -82,3 +84,31 @@
     @apply px-4 md:px-12 lg:px-16 xl:px-24
  }
 /*! common color section ends */
+
+
+
+
+/* ! responsive mode  */
+
+/* @media (min-width : 500px) and (max-width : 640px) {
+   
+} */
+
+@media (min-width : 530px) {
+  .header_section {
+     @apply flex-row gap-x-4 items-center
+  }
+}
+
+
+@media (min-width : 900px) {
+  .heading_btn {
+     @apply  block
+  }
+}
+
+@media (min-width : 450px)  {
+  .mobail_layout {
+     @apply  flex flex-row-reverse gap-x-2 justify-between  lg:hidden 
+  }
+}
