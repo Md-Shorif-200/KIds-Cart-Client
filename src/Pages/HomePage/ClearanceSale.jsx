@@ -75,7 +75,7 @@ const ClearanceSale = () => {
   return (
     <div className="clearanceSale_section common_padding">
       {/*  section title */}
-      <div className="section_title flex justify-between mb-10   ">
+      <div className="section_title flex justify-between    ">
         <h1 className="text-[30px] leading-[36px] text-black capitalize ">
           {" "}
           <span className="primary_text_color font-semibold">
@@ -90,7 +90,7 @@ const ClearanceSale = () => {
 
       {/*products section  */}
 
-      <div className="product_cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3">
+      <div className="product_cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3 my-10">
         {products.map((product, index) => {
           return (
             <div className="product_card bg-white shadow-sm border border-[#CCCCCC] rounded-lg p-4 ">
