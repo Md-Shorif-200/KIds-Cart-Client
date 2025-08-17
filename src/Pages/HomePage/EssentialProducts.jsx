@@ -115,7 +115,7 @@ const EssentialProducts = () => {
               backgroundImage: `url(${img_6})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "",
+              backgroundPosition: "center",
             }}
           >
             {/* cnt */}
