@@ -15,7 +15,8 @@ const babyMilestones = [
 
 const BabyMilestones = () => {
   return (
-    <div className="babyMilestone_section secondary_bg_color common_padding py-16 ">
+    <div className="babyMilestone_section common_padding">
+          <div className=" secondary_bg_color  py-16 rounded-lg ">
       <div className="section_title text-center   ">
         <h1 className="text-[30px] leading-[36px] text-black capitalize ">
           {" "}
@@ -26,7 +27,7 @@ const BabyMilestones = () => {
         </h1>
       </div>
       {/* baby milestone cards */}
-      <div className="milestone_cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6 my-8 ">
+      <div className="milestone_cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6 my-8 p-5">
         {babyMilestones.map((milestone, index) => {
           return (
             <div className="milestone_card">
@@ -50,6 +51,7 @@ const BabyMilestones = () => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };

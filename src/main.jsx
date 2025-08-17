@@ -13,7 +13,7 @@ import { router } from './Routes/Router.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-        <div className=''>
+        <div className=' max-w-[1920px]:'>
             <RouterProvider router={router} />
         </div>
   </StrictMode>,

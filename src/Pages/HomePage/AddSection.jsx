@@ -3,7 +3,8 @@ import img from "../../../public/add-section/img.png";
 
 const AddSection = () => {
   return (
-    <div className=" common_padding primary_bg_color  items-center grid grid-cols-1 lg:grid-cols-2 my-6 sm:my-8 mc:my-10 lg:my-16 xl:my-10  ">
+  <div className="common_padding">
+      <div className="  primary_bg_color  items-center grid grid-cols-1 lg:grid-cols-2 my-6 sm:my-8 mc:my-10 lg:my-16 xl:my-10 px-5 rounded-lg ">
 
      <div className=" img_title  items-center justify-between">
       <div className="tilte capitalize text-4xl font-bold text-white">klarna</div>
@@ -25,6 +26,7 @@ const AddSection = () => {
         </div>
      </div>
     </div>
+  </div>
   );
 };
 

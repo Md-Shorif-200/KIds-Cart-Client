@@ -8,6 +8,7 @@ import ClearanceSale from "./ClearanceSale";
 import ArrivalProducts from "./ArrivalProducts";
 import EssentialProducts from "./EssentialProducts";
 import BlogPost from "./BlogPost";
+import SiteFeatures from "./SiteFeatures";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <ArrivalProducts></ArrivalProducts>
       <EssentialProducts></EssentialProducts>
       <BlogPost></BlogPost>
+       <SiteFeatures></SiteFeatures>
     </div>
   );
 };
