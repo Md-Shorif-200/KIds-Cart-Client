@@ -6,6 +6,7 @@ import BabyMilestones from './BabyMilestones';
 import AddSection from './AddSection';
 import ClearanceSale from './ClearanceSale';
 import ArrivalProducts from './ArrivalProducts';
+import EssentialProducts from './EssentialProducts';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
                       <AddSection></AddSection>
                       <ClearanceSale></ClearanceSale>
                       <ArrivalProducts></ArrivalProducts>
+                            <EssentialProducts></EssentialProducts>
         </div>
     );
 };

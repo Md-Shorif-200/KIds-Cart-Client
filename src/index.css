@@ -166,3 +166,26 @@
      @apply w-full
   }
 }
+
+
+/* essential products section  */
+
+@media (min-width : 450px) and (max-width : 500px){
+.products-1,.products-2 {
+  @apply h-[220px]
+}
+}
+
+@media (min-width : 501px) and (max-width : 639px){
+    .title {
+      @apply flex
+    }
+
+    .beedroom_essential .products{
+      @apply grid-cols-4
+    }
+
+    .speacial_products {
+      @apply grid-cols-2
+    }
+}

@@ -4,8 +4,7 @@ import Rating from "../../Components/Rating";
 import { FaRegHeart } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 
-
-    // gift products image
+// gift products image
 import gift_Products_img_1 from "../../../public/arrival-products/prod11.jpg.png";
 import gift_Products_img_2 from "../../../public/arrival-products/prod12.jpg.png";
 import gift_box_img from "../../../public/arrival-products/gift.png.png";
@@ -15,11 +14,11 @@ import gift_box_img from "../../../public/arrival-products/gift.png.png";
 // import gift_Products_img_7 from '../../../public/arrival-products/prod11.jpg.png'
 
 // arrival products img
-import img_1 from '../../../public/recomended-products/img-1 (2).png'
-import img_2 from '../../../public/recomended-products/img-2.png'
-import img_3 from '../../../public/recomended-products/img-3.png'
-import img_4 from '../../../public/recomended-products/img-4.png'
-import img_5 from '../../../public/recomended-products/img-5.png'
+import img_1 from "../../../public/recomended-products/img-1 (2).png";
+import img_2 from "../../../public/recomended-products/img-2.png";
+import img_3 from "../../../public/recomended-products/img-3.png";
+import img_4 from "../../../public/recomended-products/img-4.png";
+import img_5 from "../../../public/recomended-products/img-5.png";
 
 const productsCategory = [
   { id: 1, text: "Best Seller" },
@@ -169,7 +168,7 @@ const ArrivalProducts = () => {
         <div className="gift_products_cards w-full xl:w-[40%]">
           {gift_arrival_products.map((product, index) => {
             return (
-              <div className="card  xl:h-[390px] bg-white shadow-md border border-[#CCCCCC]  p-5 mb-6">
+              <div className="card   bg-white shadow-md border border-[#CCCCCC]  p-5 mb-6">
                 <div className=" flex gap-5 ">
                   <div className="img">
                     <div className="product_badge flex gap-2">
@@ -235,7 +234,11 @@ const ArrivalProducts = () => {
 
                 <div className="gift_box secondary_bg_color p-[15px] sm:flex lg:block xl:flex gap-5">
                   <div className="img">
-                    <img src={product.promotions.image} className="w-1/2 mx-auto sm:w-full lg:w-1/2 xl:w-full " alt="" />
+                    <img
+                      src={product.promotions.image}
+                      className="w-1/2 mx-auto sm:w-full lg:w-1/2 xl:w-full "
+                      alt=""
+                    />
                   </div>
 
                   <div className="details  ">
@@ -266,7 +269,7 @@ const ArrivalProducts = () => {
         <div className="arrival_product_cards w-full xl:w-[60%] grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3  gap-3">
           {arrival_products.map((product, index) => {
             return (
-              <div className="product_card    xl:h-[390px] bg-white shadow-sm border border-[#CCCCCC] rounded-lg p-4 ">
+              <div className="product_card     bg-white shadow-sm border border-[#CCCCCC] rounded-lg p-4 ">
                 <div className="product_title h-[60px]">
                   <h1 className="text-[14px]  leading-[21px] font-semibold capitalize ">
                     {" "}
