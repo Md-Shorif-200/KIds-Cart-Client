@@ -81,7 +81,7 @@
 
 /* ! contact form section */
 .form_label {
-  @apply text-[14px]  leading-[21px] font-normal;
+  @apply text-[13px]  leading-[21px] font-normal;
 }
 
 .form_input {

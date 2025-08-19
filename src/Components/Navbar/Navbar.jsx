@@ -30,11 +30,15 @@ const navlinks = <>
         <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
           home  <IoIosArrowDown></IoIosArrowDown> 
         </li>
-        <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
+        {/* <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
           page  <IoIosArrowDown></IoIosArrowDown> 
-        </li>
+        </li> */}
         <li className="text-[14px] capitalize text-white lg:text-white   font-normal hover:text-teal-600 transition-colors">  
             <Link to='/contact' className="flex gap-x-2 items-center">    Contact  <IoIosArrowDown></IoIosArrowDown>  </Link>
+       
+        </li>
+        <li className="text-[14px] capitalize text-white lg:text-white   font-normal hover:text-teal-600 transition-colors">  
+            <Link to='/checkout' className="flex gap-x-2 items-center">    Checkout  <IoIosArrowDown></IoIosArrowDown>  </Link>
        
         </li>
   </>

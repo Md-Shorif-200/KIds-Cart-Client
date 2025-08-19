@@ -15,14 +15,12 @@ const Contact = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form data:", data);
-    alert("Form submitted!");
-    reset();
+
   };
 
   return (
     <div className="contact_section common_padding ">
-      {/* contact heading  */}
+      {/*  heading  */}
       <div className="contact_heading bg-white shadow-md border border-gray-100 rounded-lg p-[30px] my-4 ">
         <p className="text-[14px] capitalize font-light ">
           home / shop / <span className="font-semibold ">contact</span>{" "}
@@ -120,7 +118,7 @@ const Contact = () => {
 
               {/* --------------- country */}
               <div>
-                <label className="form_label">Country</label>
+                <label className="form_label">Country / Region</label>
                 <select
                   className="form_input "
                   defaultValue=""
@@ -150,7 +148,7 @@ const Contact = () => {
                   </span>{" "}
                 </label>
                 <input
-                  type="tel"
+                  type="text"
                   className="form_input"
                   placeholder="Subject"
                   {...register("subject")}
