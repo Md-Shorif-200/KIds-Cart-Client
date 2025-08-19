@@ -74,9 +74,28 @@
 /* padding */
 .common_padding {
   @apply px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+
+
 }
 /*! common color section ends */
 
+/* ! contact form section */
+.form_label {
+  @apply text-[14px]  leading-[21px] font-normal;
+}
+
+.form_input {
+  @apply w-full text-[13px] rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#01A49E] mt-[8px] mb-2 ;
+
+    border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 1);
+}
+
+.input_error {
+  @apply text-[12px] text-red-600  font-light
+}
 /* ! responsive mode  */
 
 /* @media (min-width : 500px) and (max-width : 640px) {
@@ -143,49 +162,45 @@
   }
 }
 
-
-
-@media (min-width: 540px)  {
+@media (min-width: 540px) {
   .img_title {
     @apply flex;
   }
 }
-
 
 @media (min-width: 501px) and (max-width: 639px) {
   .arrival_product_cards {
     @apply grid-cols-2;
   }
 
-
   .gift_box {
-    @apply flex
+    @apply flex;
   }
 
   .gift_box img {
-     @apply w-full
+    @apply w-full;
   }
 }
 
-
 /* essential products section  */
 
-@media (min-width : 450px) and (max-width : 500px){
-.products-1,.products-2 {
-  @apply h-[220px]
+@media (min-width: 450px) and (max-width: 500px) {
+  .products-1,
+  .products-2 {
+    @apply h-[220px];
+  }
 }
-}
 
-@media (min-width : 501px) and (max-width : 639px){
-    .title {
-      @apply flex
-    }
+@media (min-width: 501px) and (max-width: 639px) {
+  .title {
+    @apply flex;
+  }
 
-    .beedroom_essential .products{
-      @apply grid-cols-4
-    }
+  .beedroom_essential .products {
+    @apply grid-cols-4;
+  }
 
-    .speacial_products {
-      @apply grid-cols-2
-    }
+  .speacial_products {
+    @apply grid-cols-2;
+  }
 }

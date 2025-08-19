@@ -9,7 +9,7 @@ export default function FooterExact() {
   return (
     <footer className="bg-white text-black common_padding">
       {/* TOP: Link columns + Subscribe */}
-      <div className="  px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+      <div className="   pt-10 pb-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left: 4 columns */}
           <div className="lg:col-span-8">
