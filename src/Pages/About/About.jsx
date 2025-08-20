@@ -130,7 +130,7 @@ const About = () => {
       <div className="about_section">
         {/* ABOUT BANNER         */}
         <div
-          className="about_banner w-full h-[325px] rounded-lg py-[70px] pl-[96px] "
+          className="about_banner w-full h-[325px] rounded-lg lg:py-[70px] lg:pl-[96px] p-2 mb-12 lg:mb-0"
           style={{
             backgroundImage: `url(${about_banner_img})`,
             backgroundSize: "cover",
@@ -138,30 +138,30 @@ const About = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="banner_cnt w-[356px] ">
-            <h1 className="text-[45px] leading-[54px] capitalize font-semibold  ">
+          <div className="banner_cnt lg:w-[356px] ">
+            <h1 className="text-[35px] md::text-[45px] md:leading-[54px] capitalize font-semibold  ">
               {" "}
               Best experience <br />{" "}
               <span className="font-light lowercase"> always wins </span>{" "}
             </h1>
-            <p className=" text-[14px] font-light mt-5 primay_paragrap_text_color ">
+            <p className=" text-[14px] font-light mt-5 text-black lg:primay_paragrap_text_color ">
               #1 Online Marketplace for Electronic & Technology in Mahanttan, CA
             </p>
           </div>
         </div>
 
         {/* purpose counter  */}
-        <div className="purpose_counter flex p-[60px] ">
+        <div className="purpose_counter md:flex lg:p-[60px] ">
           <div className="w-full md:w-[30%] lg:w-[40%] ">
-            <p className=" w-[250px] text-[18px] font-semibold capitalize leading-[32px] ">
+            <p className=" lg:w-[250px] text-[18px] font-semibold capitalize lg:leading-[32px] my-5 lg:my-0 ">
               our purpose is to{" "}
               <span className="primary_text_color ">enrich and enhance</span>{" "}
               lives through technology
             </p>
           </div>
-          <div className="counter w-full md:w-[70%] lg:w-[60%]  grid grid-cols-3 ">
+          <div className="counter w-full md:w-[70%] lg:w-[60%]  grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-2 ">
             <div className="w-[145px]">
-              <h2 className="text-[40px] leading-[48px] font-semibold ">
+              <h2 className=" text-[30px] lg:text-[40px] lg:leading-[48px] font-semibold ">
                 $12.5 M
               </h2>
               <p className="text-[12px] font-light leading-[20px] primay_paragrap_text_color  capitalize ">
@@ -169,7 +169,7 @@ const About = () => {
               </p>
             </div>
             <div className="w-[145px]">
-              <h2 className="text-[40px] leading-[48px] font-semibold ">
+              <h2 className=" text-[30px] lg:text-[40px] lg:leading-[48px] font-semibold ">
                 12k+
               </h2>
               <p className="text-[12px] font-light leading-[20px] primay_paragrap_text_color  capitalize ">
@@ -177,7 +177,7 @@ const About = () => {
               </p>
             </div>
             <div className="w-[145px]">
-              <h2 className="text-[40px] leading-[48px] font-semibold ">
+              <h2 className=" text-[30px] lg:text-[40px] lg:leading-[48px] font-semibold ">
                 725+
               </h2>
               <p className="text-[12px] font-light leading-[20px] primay_paragrap_text_color  capitalize ">
@@ -188,7 +188,7 @@ const About = () => {
         </div>
 
         {/* showreel section  */}
-        <div className="showreel grid grid-cols-2 items-end gap-[100px] my-12">
+        <div className="showreel grid grid-cols-1 lg:grid-cols-2 items-end gap-5 md:gap-[100px] my-12">
           <div className="img">
             <img src={showreel_img} alt="" />
           </div>
@@ -212,7 +212,7 @@ const About = () => {
 
         {/* featured */}
 
-        <div className="featured_cards grid grid-cols-3  gap-3">
+        <div className="featured_cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3">
           {/* card -1 */}
           <div className="featured_card   bg-white rounded-lg px-7 py-4 h">
             <div className="flex justify-between">
@@ -273,8 +273,8 @@ const About = () => {
             netus et malesuada fames ac turpis egestas.
           </p>
           {/* img */}
-          <div className="img">
-            <img src={mission_vission_img} className=" rounded-lg" alt="" />
+          <div className="img w-full h-[180px] sm:h-[280px] md:h-[380px] ">
+            <img src={mission_vission_img} className=" w-full h-full rounded-lg object-cover" alt="" />
           </div>
 
           <hr className="secondary_paragrap_text_color my-7" />
@@ -347,14 +347,14 @@ const About = () => {
             </div>
 
             {/* leaders details */}
-            <div className="leaders_details grid grid-cols-5 gap-2">
+            <div className="leaders_details grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center gap-2">
               {leaderhipData.map((data, index) => {
                 return (
-                  <div key={index} className="leaders_card">
-                    <div className="img ">
-                      <img src={data.image} className="rounded-lg" alt="" />
+                  <div key={index} className="leaders_card w-full grid justify-center sm:justify-start ">
+                    <div className="img  w-[253px]  sm:w-full  ">
+                      <img src={data.image} className="rounded-lg w-[253px]  sm:w-full " alt="" />
                     </div>
-                    <div className="my-[14px] ">
+                    <div className="my-[14px] w-[253px]  sm:w-full  ">
                       <h2 className="text-[16px] font-semibold  capitalize ">
                         {" "}
                         {data.name}{" "}
@@ -383,9 +383,9 @@ const About = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="details flex justify-center gap-2">
+        <div className="details sm:flex justify-center gap-2 p-2">
           <div className="img">
-            <img src={star_icon} alt="" />
+            <img src={star_icon} className=" w-[30px] h-[30px] " alt="" />
           </div>
           <div className="info ">
             <p className="text-white text-[18px] capitalize  ">

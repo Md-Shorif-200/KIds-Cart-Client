@@ -16,9 +16,9 @@ const CheckoutForm = () => {
   const onSubmit = (data) => {};
 
   return (
-    <div className="checkout_form_section common_padding">
+    <div className="checkout_form_section bg-[#E2E4EB] common_padding py-5">
       {/*  heading  */}
-      <div className="contact_heading bg-white shadow-md border border-gray-100 rounded-lg p-[30px] my-4 ">
+      <div className="contact_heading bg-white shadow-md border border-gray-100 rounded-lg p-[30px] mb-4 ">
         <p className="text-[12px] lg:text-[14px] capitalize font-light ">
           home / page / <span className="font-semibold ">checkout</span>
         </p>
