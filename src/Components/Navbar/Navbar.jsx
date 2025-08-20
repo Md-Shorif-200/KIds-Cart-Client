@@ -10,29 +10,29 @@ import { FiHeart } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import flugImg from '../../../public/navbar/flag.png'
+import ItemList from "./ItemList";
+import NavLinks from "./NavLInks";
 
-const options = [
-  { id: '1', value: "Pregnant & Postpartum", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '2', value: "Milks & Foods", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '3', value: "Diapers & Wipes", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '4', value: "Infant", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '5', value: "Eat & Drink Supplies", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '6', value: "Baby Fashion", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '7', value: "Baby Out", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '8', value: "Toys & Study", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '9', value: "Stroller, Crib, Chair", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '10', value: "Washes & Bath", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '11', value: "Homewares", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-  { id: '12', value: "Clearance", icon : <MdKeyboardArrowRight></MdKeyboardArrowRight> },
-];
+
 
 const navlinks = <>
         <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
           home  <IoIosArrowDown></IoIosArrowDown> 
         </li>
-        {/* <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
+
+        <div className="dropdown dropdown-hover">
+  <div tabIndex={0} role="button" className="btn m-1">Hover</div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+        <li className="text-[14px] capitalize text-white lg:text-white  flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors">  
           page  <IoIosArrowDown></IoIosArrowDown> 
-        </li> */}
+        </li>
+
+
+
         <li className="text-[14px] capitalize text-white lg:text-white   font-normal hover:text-teal-600 transition-colors">  
             <Link to='/contact' className="flex gap-x-2 items-center">    Contact  <IoIosArrowDown></IoIosArrowDown>  </Link>
        
@@ -52,17 +52,8 @@ const navlinks = <>
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("List Category");
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option.value);
-    setIsOpen(false);
-  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -72,7 +63,7 @@ const Navbar = () => {
     <>
       <div className="nav_section primary_bg_color common_padding pt-6 relative">
         
-        {/* Desktop Layout */}
+        {/* ---------------- Desktop Layout */}
         <div className="hidden lg:flex justify-between">
           {/* nav logo and item list  */}
           <div className="nav_logo">
@@ -85,45 +76,8 @@ const Navbar = () => {
               </p>
             </div>
             {/* item list */}
-            <div className="items_list">
-              <div 
-                className="w-[220px] xl:w-[280px] h-[51px] bg-teal-700 rounded-tl-[10px] rounded-tr-[10px] flex justify-between items-center px-6 cursor-pointer"
-                onClick={toggleDropdown}
-              >
-                <div className="menu_icon text-[14px] font-normal text-white leading-[21px]">
-                  <MdMenu></MdMenu>
-                </div>
-                <div>
-                  <p className="text-[14px] font-normal text-white leading-[21px]">
-                    {selectedOption}
-                  </p>
-                </div>
-                <div className={`arrow_icon text-[14px] font-normal text-white leading-[21px] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
-                  <IoIosArrowDown></IoIosArrowDown>
-                </div>
-              </div>
-
-              {isOpen && (
-                <div className="select_list bg-white w-[220px] xl:w-[280px] py-4 absolute top-40 shadow-sm z-10">
-                  <h2 className="text-[14px] uppercase text_red leading-[21px] px-6">
-                    sale 40% off
-                  </h2>
-                  <ul>
-                    {options.map((option, index) => {
-                      return (
-                        <li 
-                          key={option.id}
-                          className="flex justify-between text-[14px] font-medium leading-[21px] py-[10px] hover:bg-gray-100 transition-all ease-in-out cursor-pointer px-6"
-                          onClick={() => handleOptionSelect(option)}
-                        >
-                          {option.value} 
-                          <span>{option.icon}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
+            <div>
+                <ItemList></ItemList>
             </div>
           </div>
 
@@ -143,9 +97,7 @@ const Navbar = () => {
 
             {/* nav links  */}
             <div className="nav_links mt-[25px]">
-              <ul className=" flex gap-x-[30px] ml-[15px] ">
-                {navlinks}
-              </ul>
+                <NavLinks></NavLinks>
             </div>
           </div>
 
@@ -161,7 +113,7 @@ const Navbar = () => {
                 {/* user auth */}
                 <div className="user_auth ">
                   <p className="text-[16px] uppercase text-white font-light">welcome</p>
-                  <Link className="text-[16px] uppercase text-white font-bold"> <h1> log in / Register</h1> </Link>
+                  <Link to='/log-in' className="text-[16px] uppercase text-white font-bold"> <h1> log in / Register</h1> </Link>
                 </div>
               </div>
               {/* user cart */}
@@ -199,45 +151,8 @@ const Navbar = () => {
           <div className="flex items-center gap-x-1 mb-4">
 
               {/* Item List Dropdown */}
-              <div className="items_list">
-                <div 
-                  className="w-[200px] h-[40px] bg-teal-700 rounded-[8px] flex justify-between items-center px-4 cursor-pointer"
-                  onClick={toggleDropdown}
-                >
-                  <div className="menu_icon text-[12px] font-normal text-white">
-                    <MdMenu></MdMenu>
-                  </div>
-                  <div>
-                    <p className="text-[12px] font-normal text-white">
-                      {selectedOption.length > 15 ? selectedOption.substring(0, 15) + '...' : selectedOption}
-                    </p>
-                  </div>
-                  <div className={`arrow_icon text-[12px] font-normal text-white transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
-                    <IoIosArrowDown></IoIosArrowDown>
-                  </div>
-                </div>
-
-                {isOpen && (
-                  <div className="select_list bg-white w-[200px] py-3 absolute top-[70px] right-3 shadow-lg z-20 rounded-lg">
-                    <h2 className="text-[12px] uppercase text_red px-4 mb-2">
-                      sale 40% off
-                    </h2>
-                    <ul>
-                      {options.map((option, index) => {
-                        return (
-                          <li 
-                            key={option.id}
-                            className="flex justify-between text-[12px] font-medium py-2 hover:bg-gray-100 transition-all ease-in-out cursor-pointer px-4"
-                            onClick={() => handleOptionSelect(option)}
-                          >
-                            {option.value} 
-                            <span>{option.icon}</span>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                )}
+              <div>
+                 <ItemList></ItemList>
               </div>
 
             {/* Mobile Menu Button */}
@@ -270,7 +185,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* -----------  responsive layout */}
       <div className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ease-in-out ${
         isSidebarOpen ? 'visible opacity-100' : 'invisible opacity-0'
       }`}>
@@ -301,16 +216,7 @@ const Navbar = () => {
 
             {/* Nav Links */}
             <div className="mb-6">
-              <h3 className="text-sm font-semibold text-gray-600 uppercase mb-4">Navigation</h3>
-              <ul className="space-y-3">
-                {React.Children.map(navlinks.props.children, (child, index) => (
-                  <li key={index} className="border-b border-gray-100 pb-2">
-                    {React.cloneElement(child, {
-                      className: "text-[14px] capitalize text-black flex gap-x-2 items-center font-normal hover:text-teal-600 transition-colors"
-                    })}
-                  </li>
-                ))}
-              </ul>
+                  <NavLinks></NavLinks>
             </div>
 
             {/* User Auth */}
@@ -318,7 +224,7 @@ const Navbar = () => {
               <h3 className="text-sm font-semibold text-gray-600 uppercase mb-4">Account</h3>
               <div className="user_auth space-y-2">
                 <p className="text-[14px] uppercase text-gray-600 font-light">welcome</p>
-                <Link className="text-[16px] uppercase text-teal-600 font-bold hover:text-teal-700 transition-colors">
+                <Link to='/log-in' className="text-[16px] uppercase text-teal-600 font-bold hover:text-teal-700 transition-colors">
                   <h1>log in / Register</h1>
                 </Link>
               </div>

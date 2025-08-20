@@ -8,6 +8,8 @@ import Home from "../Pages/HomePage/Home";
 import Contact from "../Pages/Contact/Contact";
 import CheckoutForm from "../Pages/Checkout/CheckoutForm";
 import About from "../Pages/About/About";
+import LogIn from "../Authentication/LogIn";
+import Register from "../Authentication/Register";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +32,16 @@ export const router = createBrowserRouter([
          {
           path : '/about',
           element : <About></About>
-         }
+         },
+        //  auth
+        {
+          path : '/log-in',
+          element : <LogIn></LogIn>
+        },
+        {
+          path : '/register',
+          element : <Register></Register>
+        }
     ]
   },
 ]);
