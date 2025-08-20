@@ -7,6 +7,7 @@ import ErrorPage from "../Components/ErrorPage";
 import Home from "../Pages/HomePage/Home";
 import Contact from "../Pages/Contact/Contact";
 import CheckoutForm from "../Pages/Checkout/CheckoutForm";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
          {
           path : '/checkout',
           element : <CheckoutForm></CheckoutForm>
+         },
+         {
+          path : '/about',
+          element : <About></About>
          }
     ]
   },

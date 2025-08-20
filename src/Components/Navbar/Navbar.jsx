@@ -41,6 +41,13 @@ const navlinks = <>
             <Link to='/checkout' className="flex gap-x-2 items-center">    Checkout  <IoIosArrowDown></IoIosArrowDown>  </Link>
        
         </li>
+
+          <li className="text-[14px] capitalize text-white lg:text-white   font-normal hover:text-teal-600 transition-colors">  
+            <Link to='/about' className="flex gap-x-2 items-center">    about  <IoIosArrowDown></IoIosArrowDown>  </Link>
+       
+        </li>
+
+
   </>
 
 const Navbar = () => {
